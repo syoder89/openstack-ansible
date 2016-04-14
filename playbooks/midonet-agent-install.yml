@@ -1,0 +1,28 @@
+---
+
+- name: Install midonet agent on compute hosts
+  hosts: compute_hosts
+  max_fail_percentage: 0
+  user: root
+  roles:
+    - role: "midonet_repos"
+      midonet_version: current
+    - role: midonet_agent
+  vars:
+    zookeeper_hosts: '{{ groups["zookeeper_all"] }}'
+    cluster_password: '{{ midonet_api_password }}'
+    cluster_hostname: '{{ groups["midonet_cluster_all"][0] }}'
+
+
+- name: Install midonet agent on gateway hosts
+  hosts: gateway_hosts
+  max_fail_percentage: 0
+  user: root
+  roles:
+    - role: "midonet_repos"
+      midonet_version: current
+    - role: midonet_agent
+  vars:
+    zookeeper_hosts: '{{ groups["zookeeper_all"] }}'
+    cluster_password: '{{ midonet_api_password }}'
+    cluster_hostname: '{{ groups["midonet_cluster_all"][0] }}'

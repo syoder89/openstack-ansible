@@ -1,0 +1,17 @@
+---
+
+component_skel:
+  midonet_cluster:
+    belongs_to:
+      - midonet_cluster_all
+
+container_skel:
+  midonet_cluster_container:
+    belongs_to:
+      - infra_containers
+      - shared-infra_containers
+    contains:
+      - midonet_cluster
+    properties:
+      service_name: midonet_cluster
+      container_release: trusty

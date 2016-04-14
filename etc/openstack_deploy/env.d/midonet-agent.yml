@@ -1,0 +1,24 @@
+---
+
+component_skel:
+  midonet_agent:
+    belongs_to:
+      - midonet_agent_all
+
+container_skel:
+  midonet_agent_container:
+    belongs_to:
+      - midonet_agent_containers
+    contains:
+      - midonet_agent
+    properties:
+      service_name: midonet_agent
+      is_metal: true
+
+physical_skel:
+  midonet_agent_containers:
+    belongs_to:
+      - all_containers
+  midonet_agent_hosts:
+    belongs_to:
+      - hosts

@@ -64,6 +64,14 @@
       override: "{{ pkg_repo_env_overrides | default({}) }}"
     - name: rabbitmq.yml
       override: "{{ rabbitmq_env_overrides | default({}) }}"
+    - name: zookeeper.yml
+      override: "{{ zookeeper_env_overrides | default({}) }}"
+    - name: cassandra.yml
+      override: "{{ cassandra_env_overrides | default({}) }}"
+    - name: midonet-agent.yml
+      override: "{{ cassandra_env_overrides | default({}) }}"
+    - name: midonet-cluster.yml
+      override: "{{ cassandra_env_overrides | default({}) }}"
     - name: rsyslog.yml
       override: "{{ rsyslog_env_overrides | default({}) }}"
     - name: shared-infra.yml
@@ -110,6 +118,16 @@
     config_type: "yaml"
   tags:
     - deploy-user-secrets
+
+- name: Deploy user_midonet file
+  config_template:
+    src: "../etc/openstack_deploy/user_midonet.yml"
+    dest: "/etc/openstack_deploy/user_midonet.yml"
+    config_overrides: "{{ user_midonet_overrides | default({}) }}"
+    config_type: "yaml"
+  tags:
+    - deploy-user-midonet
+
 
 - name: Generate any missing values in user_secrets
   shell: ../scripts/pw-token-gen.py --file /etc/openstack_deploy/user_secrets.yml
