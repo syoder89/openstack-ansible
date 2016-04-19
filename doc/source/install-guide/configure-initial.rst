@@ -99,8 +99,8 @@ within ``user_variables.yml``:
 
     apply_security_hardening: false
 
-When the variable is set to ``true``, the ``setup-hosts.yml`` playbook applies
-the role during deployments.
+When the variable is set, the role will be applied by the ``setup-hosts.yml``
+playbook automatically during deployments.
 
 Deployers can apply security configurations to an existing environment or audit
 an environment using a playbook supplied with OpenStack-Ansible:
