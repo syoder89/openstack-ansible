@@ -37,6 +37,7 @@
       cassandra_hosts: '{{ groups["cassandra_all"] }}'
       midonet_password: '{{ midonet_api_password }}'
       keystone_username: "{{ keystone_admin_user_name }}"
+      keystone_password: "{{ keystone_auth_admin_password }}"
       keystone_project: "{{ keystone_admin_tenant_name }}"
       keystone_token: "{{ keystone_auth_admin_token }}"
       keystone_host: "{{ internal_lb_vip_address }}"
