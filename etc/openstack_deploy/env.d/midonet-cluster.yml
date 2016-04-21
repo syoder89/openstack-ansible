@@ -8,10 +8,17 @@ component_skel:
 container_skel:
   midonet_cluster_container:
     belongs_to:
-      - infra_containers
-      - shared-infra_containers
+      - midonet_cluster_containers
     contains:
       - midonet_cluster
     properties:
       service_name: midonet_cluster
       container_release: trusty
+
+physical_skel:
+  midonet_cluster_containers:
+    belongs_to:
+      - all_containers
+  midonet_cluster_hosts:
+    belongs_to:
+      - hosts

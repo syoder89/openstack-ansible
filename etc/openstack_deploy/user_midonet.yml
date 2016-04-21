@@ -4,4 +4,18 @@ midonet_repo_url_base: "http://builds.midonet.org"
 midonet_repo: "midonet-5"
 midonet_dist: "stable"
 
-midonet_api_password: "midonet"
+midonet_api_password: "{{ keystone_auth_admin_password }}"
+
+zk_iface: "ansible_eth1"
+cs_iface: "ansible_eth1"
+md_iface: "ansible_eth1"
+
+tz_name: "tz"
+tzone_name: "tz"
+tz_type: "vxlan"
+tzone_type: "vxlan"
+
+tunnel_ip: "{{ ansible_ssh_host }}"
+metadata_host: "{{ internal_lb_vip_address }}"
+metadata_secret: "{{ nova_metadata_proxy_secret }}"
+dhcp_mtu: 1550

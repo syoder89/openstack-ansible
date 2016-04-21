@@ -1,7 +1,13 @@
 ## Enable midonet plugin
 neutron_plugin_type: midonet
 # Do not install neutron on venv (alongside with midonet packages)
-#neutron_venv_enabled: false
+neutron_venv_enabled: false
+neutron_plugin_base:
+  - midonet.neutron.services.l3.l3_midonet.MidonetL3ServicePlugin
+  - lbaas
+#  - vpnaas
+neutron_plugin_loaded_base: "{% for plugin in neutron_plugin_base %}{{ plugin }}{% if not loop.last %},{% endif %}{% endfor %}"
+neutron_lbaas: True
 # Neutron Services
 neutron_services:
  neutron-dhcp-agent:
