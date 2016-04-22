@@ -76,7 +76,7 @@
 - name: os_neutron
   scm: git
   src: https://github.com/syoder89/openstack-ansible-os_neutron.git
-  version: 30cf7ecf2857a30aae403c4c4f4ef3eec59a7695
+  version: d3bb2cec3af92022bc2a941066f71e17d8f6ba61
 #  src: https://git.openstack.org/openstack/openstack-ansible-os_neutron
 #  version: dd05e2e1695da028a4a06beb241a4c5db8e98021
 - name: os_nova
@@ -127,7 +127,7 @@
   src: syoder89.cassandra
 - name: midonet_agent
   src: https://github.com/syoder89/ansible-midonet-agent.git
-  version: a504532dab623154107e611accf55c8c2f584028
+  version: f5588c5fa4380072fddc635026486de66d7d8297
 - name: midonet_cluster
   src: https://github.com/syoder89/ansible-midonet-cluster.git
-  version: 94f88a9faced0256f2572f333b66131011934c67
+  version: 11f459b063900116de8f41d1021ada270111f016
