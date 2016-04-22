@@ -8,17 +8,10 @@ component_skel:
 container_skel:
   zookeeper_container:
     belongs_to:
-      - zookeeper_containers
+      - midonet-nsdb_containers
     contains:
       - zookeeper
     properties:
       service_name: zookeeper
       container_release: trusty
 
-physical_skel:
-  zookeeper_containers:
-    belongs_to:
-      - all_containers
-  zookeeper_hosts:
-    belongs_to:
-      - hosts
