@@ -185,3 +185,9 @@ haproxy_service_configs:
       haproxy_backend_nodes: "{{ groups['aodh_api'] | default([]) }}"
       haproxy_port: 8042
       haproxy_balance_type: http
+  - service:
+      haproxy_service_name: midonet_cluster
+      haproxy_backend_nodes: "{{ groups['midonet_cluster'] | default([]) }}"
+      haproxy_port:  8183
+      haproxy_backend_port: 8181
+      haproxy_balance_type: http
