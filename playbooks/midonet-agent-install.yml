@@ -12,6 +12,7 @@
     zookeeper_hosts: '{{ groups["zookeeper_all"] }}'
     cluster_password: '{{ midonet_api_password }}'
     cluster_hostname: '{{ groups["midonet_cluster_all"][0] }}'
+    agent_template: 'agent-compute-{{ agent_template_size }}'
 
 
 - name: Install midonet agent on gateway hosts
@@ -26,3 +27,4 @@
     zookeeper_hosts: '{{ groups["zookeeper_all"] }}'
     cluster_password: '{{ midonet_api_password }}'
     cluster_hostname: '{{ groups["midonet_cluster_all"][0] }}'
+    agent_template: 'agent-gateway-{{ agent_template_size }}'
