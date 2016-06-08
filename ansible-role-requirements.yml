@@ -81,8 +81,10 @@
 #  version: dd05e2e1695da028a4a06beb241a4c5db8e98021
 - name: os_nova
   scm: git
-  src: https://git.openstack.org/openstack/openstack-ansible-os_nova
-  version: b272f43536e3ae502ff37a34e545895f74ad6860
+  src: https://github.com/syoder89/openstack-ansible-os_nova.git
+  version: 10a9a0b52ea436109a6a27c60b1ab5c703ca6faa
+#  src: https://git.openstack.org/openstack/openstack-ansible-os_nova
+#  version: b272f43536e3ae502ff37a34e545895f74ad6860
 - name: os_swift
   scm: git
   src: https://git.openstack.org/openstack/openstack-ansible-os_swift
