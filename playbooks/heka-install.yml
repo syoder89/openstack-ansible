@@ -1,0 +1,10 @@
+---
+- name: Install heka
+  hosts: lma-collector_all
+  max_fail_percentage: 0
+  user: root
+  roles:
+    - role: "heka_server"
+      tags:
+        - "heka-server"
+        - "upgrade-heka-server"

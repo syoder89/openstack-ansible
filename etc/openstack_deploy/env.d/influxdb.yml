@@ -1,0 +1,25 @@
+---
+
+component_skel:
+  influxdb:
+    belongs_to:
+      - influxdb_all
+
+container_skel:
+  influxdb_container:
+    belongs_to:
+      - influxdb_containers
+    contains:
+      - influxdb
+    properties:
+      service_name: influxdb
+      container_release: trusty
+
+physical_skel:
+  influxdb_containers:
+    belongs_to:
+      - all_containers
+  influxdb_hosts:
+    belongs_to:
+      - hosts
+

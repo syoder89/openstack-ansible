@@ -76,7 +76,7 @@
 - name: os_neutron
   scm: git
   src: https://github.com/syoder89/openstack-ansible-os_neutron.git
-  version: 72e55c0ca781bf3183baaa6c5843a441946c3b7a
+  version: dc8e9ec1dfbf64117de31b620d20a2f20bba8024
 #  src: https://git.openstack.org/openstack/openstack-ansible-os_neutron
 #  version: dd05e2e1695da028a4a06beb241a4c5db8e98021
 - name: os_nova
@@ -131,3 +131,7 @@
 - name: midonet_cluster
   src: https://github.com/syoder89/ansible-midonet-cluster.git
   version: c9cb6bf684cb57a6662796369c883d0b72ec22e3
+- name: nginx_server
+  src: geerlingguy.nginx
+- name: kibana_server
+  src: geerlingguy.kibana
