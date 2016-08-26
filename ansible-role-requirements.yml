@@ -129,7 +129,7 @@
   src: syoder89.cassandra
 - name: midonet_agent
   src: https://github.com/syoder89/ansible-midonet-agent.git
-  version: c930cfd4d2f35fa31c72872bd7061a4615ad2c53
+  version: 7fd3ca144667e7cbd33c377db16ff8ed68f27c7c
 - name: midonet_cluster
   src: https://github.com/syoder89/ansible-midonet-cluster.git
   version: deefbab8cb252347045d13a5054b42da02f2679e
