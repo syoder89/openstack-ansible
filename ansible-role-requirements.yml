@@ -129,10 +129,10 @@
   src: syoder89.cassandra
 - name: midonet_agent
   src: https://github.com/syoder89/ansible-midonet-agent.git
-  version: 6489f47864ca8f38e0b5b99554171a5ae38a15f1
+  version: c930cfd4d2f35fa31c72872bd7061a4615ad2c53
 - name: midonet_cluster
   src: https://github.com/syoder89/ansible-midonet-cluster.git
-  version: c9cb6bf684cb57a6662796369c883d0b72ec22e3
+  version: deefbab8cb252347045d13a5054b42da02f2679e
 - name: nginx_server
   src: geerlingguy.nginx
 - name: kibana_server
